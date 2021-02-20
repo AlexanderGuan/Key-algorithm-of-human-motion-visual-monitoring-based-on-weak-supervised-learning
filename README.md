@@ -4,12 +4,12 @@
 >针对图像语义分割中训练样本数量不足、标注精度不足时，全监督学习算法在语义分割中存在的分割质量较低的问题，本文提出一种将含噪声样本作为训练集的容噪条件生成式对抗网络模型（Noise-tolerance Conditional Generative Adversarial Networks, NCGAN），只需要少量或粗糙的训练样本即可得到较好的分割结果。该方法采用条件生成式对抗网络的基本思想，同时利用U-Net++分割网络将输入数据进行分割，继而利用马尔科夫辨别器对分割结果进行评价，在不断的对抗训练后模型将捕获图像中的高低频信息。本文使用3个公开数据集进行验证，结果表明，本算法在保证检测准确率不低于80%的前提下，将需要人工标注的训练数据减少至有监督算法的30%，且在不同场景下具有较强的通用性。与U-Net模型相比，本文所提出的模型在pixel acc评价标准上提升2.02%,在MIoU标准上提升0.77。  
 
 ## 二、实验与结果  
-- CityScapes数据集  
+- **CityScapes数据集**  
 分割的类别为人体、汽车、房屋、植被、道路（分别为CityScapes Class 1,Class 2）。设置学习率为0.001，批大小为8，按照6:1:1的比例划分训练集、验证集和测试集。迭代7000次，每次迭代时间越200秒，训练时间52小时。训练完成后，使用网络进行测试得到结果如图4-1所示，其正确地将每个属类进行语义分割。  
 ![cityscapes](https://github.com/AlexanderGuan/Key-algorithm-of-human-motion-visual-monitoring-based-on-weak-supervised-learning/blob/main/cityscapes.JPG)  
 经测试，统计结果在CityScapes数据集上的多目标语义分割平均像素精度为81.34%，基本与全监督语义分割算法持平，符合实际工程需求。  
 
-- GoogleMap数据集  
+- **GoogleMap数据集**  
 本节在谷歌地图数据集上进行了实验，该数据集共包含建筑与背景两个类。原始图像为16张高分辨率的卫星图像，本文将图像裁剪为256x256分辨率的共3800张图像。设置学习率为0.001，批大小为8，按照6:1:1的比例划分训练集、验证集和测试集。Epoch为200次，共迭代95000次，平均每个epoch需要200秒，共用时11.5个小时。  
 ![google,ap](https://github.com/AlexanderGuan/Key-algorithm-of-human-motion-visual-monitoring-based-on-weak-supervised-learning/blob/main/google%20map.JPG)  
 经测试，统计结果在谷歌地图数据集上的多目标语义分割平均像素精度为83.25%。
