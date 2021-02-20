@@ -16,7 +16,12 @@
 >cd Key-algorithm-of-human-motion-visual-monitoring-based-on-weak-supervised-learning  
 
 - 安装依赖库：  
-> pip install -r requirements.txt  
+> pip3 install -r requirements.txt  
 
 - 训练:  
->python3 train.py --dataroot [图像的位置(绝对路径)] --name [项目的名称] --direction BtoA
+>python3 train.py --dataroot [图像的位置(绝对路径)] --name [项目的名称] --direction BtoA  
+
+- 推理：  
+>python3 train.py --dataroot [待处理的图像的位置(绝对路径)] --name [项目的名称] --direction BtoA  
+
+- 结果将保存至: ./results/[项目的名称]/latest_test/
