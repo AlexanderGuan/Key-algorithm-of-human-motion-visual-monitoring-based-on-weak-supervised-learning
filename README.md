@@ -70,7 +70,7 @@ L_CGAN (G,D)=E_(x,y) [logD(x,y)]+E_(y,z) [log⁡(1-D(G(y,z))]
 ![UNet网络结构](https://github.com/AlexanderGuan/Key-algorithm-of-human-motion-visual-monitoring-based-on-weak-supervised-learning/blob/main/UNet.JPG)  
 
 - **损失函数**  
-
+![Unet function](https://github.com/AlexanderGuan/Key-algorithm-of-human-motion-visual-monitoring-based-on-weak-supervised-learning/blob/main/UNet%20function.JPG)
 
 ## 三、引用  
 >@inproceedings{CycleGAN2017,
