@@ -41,7 +41,7 @@ python3 test.py --dataroot [待处理的图像的位置(绝对路径)] --directi
 - **基本思想**  
 文献[3]提出条件生成式对抗网络(Generative Adversarial Network, GAN)，其主要包括两个网络，一个是生成器Generater，另一个是辨别器Discriminator，一个是生成器Generater将随机输入的噪声映射为伪图像，另一个是辨别器Discriminator判断输入数据是真实图像还是一个是Generater产生的伪图像，图为GAN网络的结构。  
 
-- ** 目标函数**  
+- **目标函数**  
 GAN的目标函数如下式所示：
 
 L_GAN (G,D)=E_y [logD(y)]+E_x [log⁡(1-D(G(x))]
