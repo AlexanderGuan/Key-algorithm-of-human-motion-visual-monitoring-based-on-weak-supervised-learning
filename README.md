@@ -27,7 +27,24 @@
 - 结果将保存至: ./results/[项目的名称]/latest_test/  
 
 ### 使用本项目已经训练好的与训练模型  
-从百度网盘下载预训练模型:
+- 从百度网盘下载预训练模型:
 
 - 推理:  
-python3 test.py --dataroot [待处理的图像的位置(绝对路径)] --direction BtoA --name photo2label_pretrained
+python3 test.py --dataroot [待处理的图像的位置(绝对路径)] --direction BtoA --name photo2label_pretrained  
+
+
+## 引用  
+>@inproceedings{CycleGAN2017,
+  title={Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networkss},
+  author={Zhu, Jun-Yan and Park, Taesung and Isola, Phillip and Efros, Alexei A},
+  booktitle={Computer Vision (ICCV), 2017 IEEE International Conference on},
+  year={2017}
+}
+
+
+@inproceedings{isola2017image,
+  title={Image-to-Image Translation with Conditional Adversarial Networks},
+  author={Isola, Phillip and Zhu, Jun-Yan and Zhou, Tinghui and Efros, Alexei A},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on},
+  year={2017}
+}
