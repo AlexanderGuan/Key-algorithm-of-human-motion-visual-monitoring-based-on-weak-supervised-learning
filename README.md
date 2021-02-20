@@ -26,14 +26,14 @@
 
 - 结果将保存至: ./results/[项目的名称]/latest_test/  
 
-### 使用本项目已经训练好的与训练模型  
+### 2.3 使用本项目已经训练好的与训练模型  
 - 从百度网盘下载预训练模型:
 
 - 推理:  
 python3 test.py --dataroot [待处理的图像的位置(绝对路径)] --direction BtoA --name photo2label_pretrained  
 
 
-## 引用  
+## 三、引用  
 >@inproceedings{CycleGAN2017,
   title={Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networkss},
   author={Zhu, Jun-Yan and Park, Taesung and Isola, Phillip and Efros, Alexei A},
