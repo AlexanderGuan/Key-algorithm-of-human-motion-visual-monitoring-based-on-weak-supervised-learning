@@ -24,4 +24,10 @@
 - 推理：  
 >python3 train.py --dataroot [待处理的图像的位置(绝对路径)] --name [项目的名称] --direction BtoA  
 
-- 结果将保存至: ./results/[项目的名称]/latest_test/
+- 结果将保存至: ./results/[项目的名称]/latest_test/  
+
+### 使用本项目已经训练好的与训练模型  
+从百度网盘下载预训练模型:
+
+- 推理:  
+python3 test.py --dataroot [待处理的图像的位置(绝对路径)] --direction BtoA --name photo2label_pretrained
